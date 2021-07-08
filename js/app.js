@@ -134,9 +134,11 @@ function onEscKeyPress(event) {
 // =====Scroll=====
 
 function onImageChange(event) {
-  // if (event.code !== 'ArrowRight' || event.code !== 'ArrowLeft') {
-  //   return;
-  // }
+  const notRightLeftArrow = event.code !== 'ArrowRight' && event.code !== 'ArrowLeft';
+
+  if (notRightLeftArrow) {
+    return;
+  }
 
   const right = 'ArrowRight';
   const left = 'ArrowLeft';
